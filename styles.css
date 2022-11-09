@@ -11,6 +11,9 @@ h1{
 .cuadrado{
     height: 200px;
 }
+.btn-outline-light{
+    border-width: 2px;
+}
 
 #cuadrado-1{
     background-color: #F2545B;
