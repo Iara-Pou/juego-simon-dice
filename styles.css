@@ -2,6 +2,7 @@ body{
     background-color: #273043;
     color: #F3EFE0;
     font-family: 'Roboto Mono', monospace;
+    overflow: hidden;
 }
 
 h1{
@@ -17,6 +18,10 @@ h1{
     position: relative;
     transform: rotate(45deg);
     margin: 7% auto 3%;
+}
+
+#boton-empezar{
+    position: absolute;
 }
 .btn-outline-light{
     border-width: 2px;
