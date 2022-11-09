@@ -9,7 +9,8 @@ h1{
 }
 
 .cuadrado{
-    height: 200px;
+    height: 9em;
+    width: 9em;
 }
 
 .btn-outline-light{
