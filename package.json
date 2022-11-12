@@ -1,0 +1,22 @@
+{
+  "name": "juego-simon-dice",
+  "version": "1.0.0",
+  "description": "juego de simon dice hecho con js, css, bootstrap",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iara-Pou/juego-simon-dice.git"
+  },
+  "author": "Iara Pou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Iara-Pou/juego-simon-dice/issues"
+  },
+  "homepage": "https://github.com/Iara-Pou/juego-simon-dice#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.2"
+  }
+}
