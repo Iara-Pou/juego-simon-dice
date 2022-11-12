@@ -12,17 +12,19 @@ h1{
 .cuadrado{
     height: 9em;
     width: 9em;
+    cursor: pointer;
 }
 
 #container-cuadrados{
-    position: relative;
     transform: rotate(45deg);
     margin: 7% auto 3%;
 }
 
 #boton-empezar{
     position: absolute;
+    z-index: 20;
 }
+
 .btn-outline-light{
     border-width: 2px;
 }
