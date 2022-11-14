@@ -13,12 +13,13 @@
 </head>
 
 <body>
-    <div class="container pt-4 d-flex flex-column gap-4 text-center">
+    <div id="interfaz-comienzo" class="container pt-4 d-flex flex-column gap-4 text-center ">
+        <h1 class="mt-4">Simon dice</h1>
+        <h2>¡Apretá "start" para jugar!</h2>
+        <div class="col-sm-6"><button id="boton-empezar" class="btn btn-outline-light" type="button"> START</button></div>
+    </div>
+    <div id="interfaz-juego" class="oculto container pt-4 d-flex flex-column gap-4 text-center ">
         <header>
-            <div class="container mt-4">
-                <h1>Simon dice</h1>
-                <h2>¡Apretá 'start' para jugar!</h2>
-            </div>
         </header>
         <section>
             <div id="container-cuadrados">
@@ -35,9 +36,6 @@
         <section>
             <div class="row justify-content-evenly">
                 <div class="col-sm-6"><p class="btn btn-outline-light disabled"  > RONDAS: <span id="numero-rondas">0</span></p></div>
-                <div class="col-sm-6"><button id="boton-empezar" class="btn btn-outline-light" type="button"> START</button></div>
-            </div>  
-        </section>         
     </div>
 
     <script type="text/javascript" src="./script.js"></script>
