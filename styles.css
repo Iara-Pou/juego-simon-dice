@@ -41,8 +41,10 @@ h1{
     display: none !important;;
 }
 
-#boton-empezar{
-    margin-top: 30%;
+.boton-empezar{
+    margin-top: 20%;
+}
+
 .cartel{
     background-color: rgba(252, 255, 223, 0.4);
     padding: 2%;
