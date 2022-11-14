@@ -13,36 +13,42 @@
 </head>
 
 <body>
-    <div id="interfaz-comienzo" class="container pt-4 d-flex flex-column gap-4 text-center">
+    <div class="container pt-4 d-flex flex-column gap-4 text-center">
         <h1 class="mt-4">Simon dice</h1>
-        <h2>¡Apretá "start" para jugar!</h2>
-        <div class="col-sm-6 align-self-center">
-            <button id="boton-empezar" class="btn btn-outline-light w-100" type="button"> START</button>
+
+        <div id="interfaz-comienzo" class="align-self-center">
+            <h2>¡Apretá "start" para jugar!</h2>
+            <div class="col align-self-center">
+                <button id="boton-empezar" class="btn btn-outline-light w-100 " type="button"> START</button>
+            </div>
         </div>
-    </div>
-    <div id="interfaz-juego" class="oculto container pt-4 d-flex flex-column gap-4 text-center ">
-        <header>
-            <h1 class="mt-4">Simon dice</h1>
-        </header>
-        <section>
-            <div id="container-cuadrados">
-                <div class="row justify-content-center">
-                    <div class="cuadrado" id="cuadrado-1"></div>
-                    <div class="cuadrado" id="cuadrado-2"></div>
+        <div id="interfaz-juego" class="oculto">
+            <section>
+                <div id="container-cuadrados">
+                    <div class="row justify-content-center">
+                        <div class="cuadrado" id="cuadrado-1"></div>
+                        <div class="cuadrado" id="cuadrado-2"></div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="cuadrado" id="cuadrado-3"></div>
+                        <div class="cuadrado" id="cuadrado-4"></div>
+                    </div>
                 </div>
-                <div class="row justify-content-center">
-                    <div class="cuadrado" id="cuadrado-3"></div>
-                    <div class="cuadrado" id="cuadrado-4"></div>
+            </section>
+            <section>
+                <div class="row justify-content-evenly">
+                    <div class="col-sm-4 mt-5">
+                        <p class="btn btn-outline-light disabled  w-100"> RONDAS: <span id="numero-rondas">0</span></p>
+                    </div>
                 </div>
+            </section>
+        </div>
+        <div id="interfaz-resultados" class="align-self-center oculto">
+            <div class="col cartel">
+                <h2>ganaste/ perdiste</h2>
+                <p>¡Apretá "START" si queres jugar de nuevo!</p>
+                <button id="boton-empezar" class="btn btn-outline-light w-100" type="button"> START</button>
             </div>
-        </section>
-        <section>
-            <div class="row justify-content-evenly">
-                <div class="col-sm-4 mt-5">
-                    <p class="btn btn-outline-light disabled  w-100"> RONDAS: <span id="numero-rondas">0</span></p>
-                </div>
-            </div>
-        </section>
         </div>
     </div>
     <script type="text/javascript" src="./script.js"></script>
