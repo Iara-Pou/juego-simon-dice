@@ -36,3 +36,7 @@ h1{
 #cuadrado-4{
     background-color: #A5C879;
 }
+
+.oculto{
+    display: none !important;;
+}
