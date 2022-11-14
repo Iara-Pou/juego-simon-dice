@@ -20,11 +20,6 @@ h1{
     margin: 7% auto 3%;
 }
 
-#boton-empezar{
-    position: absolute;
-    z-index: 20;
-}
-
 .btn-outline-light{
     border-width: 2px;
 }
