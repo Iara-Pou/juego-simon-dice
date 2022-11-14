@@ -40,3 +40,7 @@ h1{
 .oculto{
     display: none !important;;
 }
+
+#boton-empezar{
+    margin-top: 30%;
+}
