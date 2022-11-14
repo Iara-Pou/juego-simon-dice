@@ -43,4 +43,7 @@ h1{
 
 #boton-empezar{
     margin-top: 30%;
+.cartel{
+    background-color: rgba(252, 255, 223, 0.4);
+    padding: 2%;
 }
