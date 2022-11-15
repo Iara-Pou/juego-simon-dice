@@ -7,6 +7,10 @@ function empezarJuego(){
 
     deshabilitar ($botonEmpezar);
 
+    const secuenciaMaquina = [];
+    const secuenciaUsuario = [];
+    let contadorRondas = 0;
+
 }
 
 function deshabilitar (elemento){
