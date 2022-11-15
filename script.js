@@ -1,10 +1,11 @@
 
-const $botonEmpezar = document.querySelector("#boton-empezar");
-$botonEmpezar.onclick = manejarRonda;
-    
-const secuenciaMaquina = [];
-let secuenciaUsuario = [];
-let contadorRondas = 0;
+    const $botonEmpezar = document.querySelector("#boton-empezar");
+    $botonEmpezar.onclick = manejarRonda;
+        
+    let secuenciaMaquina = [];
+    let secuenciaUsuario = [];
+    let contadorRondas = 0;
+
 
 function deshabilitarBoton (){
     $botonEmpezar.disabled = true;
@@ -129,5 +130,10 @@ function ofrecerPartidaNueva(){
     reiniciarValoresIniciales ();
 }
 
+function reiniciarValoresIniciales (){
+    secuenciaMaquina = [];
+    secuenciaUsuario = [];
+    contadorRondas = 0;
+}
         //habilitar el botón para que pueda jugar de vuelta
         //actualizar mensaje ("Perdiste, si querés jugar de vuelta, apretá empezar")
