@@ -55,10 +55,12 @@ function resaltar ($cuadrado){
 
 function manejarInputUsuario(evento){
 
-    const $cuadrado = evento.target;
-    resaltar($cuadrado);
-        //for -> i sea === a length de la secuencia
-    //toma los inputs
+    if(secuenciaUsuario.length < secuenciaMaquina.length){
+        const $cuadrado = evento.target;
+        resaltar($cuadrado);
+    }
+
+    //if -> i sea === a length de la secuencia
     //compara inputs -> de a uno, los compara cuando son apretados
     //
 
@@ -66,6 +68,7 @@ function manejarInputUsuario(evento){
     //secuencia vacía
     //devuelve el nro de ronda
 }
+
 
 function ganar (){
     console.log("gaa")
