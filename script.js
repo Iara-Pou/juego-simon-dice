@@ -1,4 +1,11 @@
 //seleccionar el botón empezar para empezar el juego
+
+const $botonEmpezar = document.querySelector("#boton-empezar");
+$botonEmpezar.onclick = empezarJuego;
+
+function empezarJuego(){
+}
+}
 //manejar ronda, --> una vez que ya la ejecuté deshabilitar el botón para empezar
     //tener la secuencia de la máquina vacía
 
