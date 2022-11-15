@@ -11,6 +11,10 @@ function deshabilitarBoton (){
     $botonEmpezar.disabled = true;
 }
 
+function habilitarBoton(){
+    $botonEmpezar.disabled = false;
+}
+
 function deshabilitarCuadrados (){
     const $cuadrados = document.querySelectorAll(".cuadrado");
     $cuadrados.forEach($cuadrado => $cuadrado.onclick = "");
@@ -126,7 +130,7 @@ function perder (){
 
 function ofrecerPartidaNueva(){
     mostrarMensaje('Si querés jugar de vuelta, apretá "START"', true);
-    $botonEmpezar.disabled = false;
+    habilitarBoton();
     reiniciarValoresIniciales ();
 }
 
