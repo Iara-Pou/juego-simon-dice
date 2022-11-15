@@ -26,9 +26,9 @@ function devolverCuadradoRandom(){
         //selecciono los cuadrados y armo un array de cuadrados
         //conseguir un número del 0 al 3
         //return cuadrados[numero random del 0 al 3]
-    const $cuadrados = document.querySelectorAll("#cuadrado");
-    const indice = Math.floor(Math.random()*cuadrados.length);
-    return $cuadrados(indice);
+    const $cuadrados = document.querySelectorAll(".cuadrado");
+    const indice = Math.floor(Math.random()*$cuadrados.length);
+    return $cuadrados[indice];
 }
     //tener la secuencia de la máquina vacía
 
