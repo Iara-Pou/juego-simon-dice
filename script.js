@@ -70,14 +70,26 @@ function manejarInputUsuario(evento){
         
         if(esExito){
             contadorRondas ++;
+
+            if(secuenciaUsuario.length === secuenciaMaquina.length){
+                actualizarRondas(contadorRondas);
+
+                secuenciaUsuario = [];
+                contadorRondas = 0;
+                
+                manejarRonda();
+            }
+
         } else {
             perder();
         }
         
     }
 
+}
 
-
+function actualizarRondas (ronda){
+    document.querySelector("#numero-rondas").textContent = ronda;
 }
 
 function validar (contadorRondas){
