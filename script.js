@@ -76,6 +76,10 @@ function manejarInputUsuario(evento){
         
     }
 
+    if(secuenciaUsuario.length === secuenciaMaquina.length){
+        contadorRondas++;
+        manejarRonda();
+    }
 
 }
 
