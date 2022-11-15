@@ -65,28 +65,23 @@ function manejarInputUsuario(evento){
         const $cuadrado = evento.target;
         resaltar($cuadrado);
 
-        let indice = 0;
         secuenciaUsuario.push($cuadrado) 
-        let esExito = validar (indice) 
+        let esExito = validar (contadorRondas) 
         
         if(esExito){
-            indice ++;
+            contadorRondas ++;
         } else {
             perder();
         }
         
     }
 
-    if(secuenciaUsuario.length === secuenciaMaquina.length){
-        secuenciaUsuario = [];
-        contadorRondas++;
-        manejarRonda();
-    }
+
 
 }
 
-function validar (indice){
-    if (secuenciaMaquina[indice] === secuenciaUsuario[indice]){
+function validar (contadorRondas){
+    if (secuenciaMaquina[contadorRondas] === secuenciaUsuario[contadorRondas]){
         return true;
     } else {
         return false;
