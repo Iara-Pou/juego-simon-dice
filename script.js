@@ -24,6 +24,7 @@ function devolverCuadradoRandom(){
 function manejarRonda (){
     deshabilitarBoton();
     deshabilitarCuadrados();
+
     secuenciaMaquina.push(devolverCuadradoRandom());
     const RETRASO_TURNO_JUGADOR = (secuenciaMaquina.length + 1)*1000;
 
@@ -77,6 +78,7 @@ function manejarInputUsuario(evento){
     }
 
     if(secuenciaUsuario.length === secuenciaMaquina.length){
+        secuenciaUsuario = [];
         contadorRondas++;
         manejarRonda();
     }
