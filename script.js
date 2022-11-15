@@ -87,7 +87,6 @@ function manejarInputUsuario(evento){
             } else if (secuenciaUsuario.length === secuenciaMaquina.length){
                 secuenciaUsuario = [];
                 contadorRondas = 0;
-
                 manejarRonda();
             } 
             
@@ -121,6 +120,13 @@ function ganar (){
 function perder (){
     deshabilitarCuadrados();
     mostrarMensaje("perdiste", false);
+    setTimeout(ofrecerPartidaNueva, 2000);
+}
+
+function ofrecerPartidaNueva(){
+    mostrarMensaje('Si querés jugar de vuelta, apretá "START"', true);
+    $botonEmpezar.disabled = false;
+    reiniciarValoresIniciales ();
 }
 
         //habilitar el botón para que pueda jugar de vuelta
