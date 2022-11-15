@@ -8,9 +8,6 @@ let contadorRondas = 0;
 
 function deshabilitar (elemento){
     elemento.disabled = true;
-    //voy a probar solo con el atributo y si no funciona, le sumo lo del onclick con la función vacía
-    // elemento.onclick = function(){
-    // }
 }
 
 function devolverCuadradoRandom(){
@@ -21,6 +18,7 @@ function devolverCuadradoRandom(){
 
 function manejarRonda (){
     deshabilitar ($botonEmpezar);
+    document.querySelectorAll(".cuadrado").forEach($cuadrado => deshabilitar($cuadrado))
     secuenciaMaquina.push(devolverCuadradoRandom());
     const RETRASO_TURNO_JUGADOR = (secuenciaMaquina.length + 1)*1000;
 
@@ -59,9 +57,6 @@ function manejarInputUsuario(evento){
 
     const $cuadrado = evento.target;
     resaltar($cuadrado);
-    //habilita cuadrados --> usaba el event. target
-    //cuando los cuadrados tengan click, se resaltan.
-
         //for -> i sea === a length de la secuencia
     //toma los inputs
     //compara inputs -> de a uno, los compara cuando son apretados
@@ -75,10 +70,7 @@ function manejarInputUsuario(evento){
 function ganar (){
     console.log("gaa")
 }
-//manejar ronda --> empieza con el push, ronda serviría para mostrar elementos
-                    // con la , set time out función resaltar,  1000
-                    //mensaje = "turno de la máquina"
-                    //deshabilitar los cuadrados : se podía hacer pasándole una función vacía. no sé si con el disabled no toma los onclick -> de los botones no pero desconozco de un div
+//manejar ronda -->    //deshabilitar los cuadrados : se podía hacer pasándole una función vacía. no sé si con el disabled no toma los onclick -> de los botones no pero desconozco de un div
 //, esperar input usuario, mandar a verificarlo, 
 //verificarlo lo manda a resultados si lo hubieran si gano mandarlo a ganar y si perdió mandarlo a perder.
     //tener la secuencia de la máquina vacía
