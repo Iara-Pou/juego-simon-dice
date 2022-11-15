@@ -73,6 +73,7 @@ function manejarInputUsuario(evento){
             indice ++;
         } else {
             console.log("no era ese");
+            perder();
         }
         
     }
@@ -96,6 +97,11 @@ function validar (indice){
 
 function ganar (){
     console.log("gaa")
+}
+
+function perder (){
+deshabilitarCuadrados();
+mostrarMensaje("perdiste")
 }
 //manejar ronda -->    //deshabilitar los cuadrados : se podía hacer pasándole una función vacía. no sé si con el disabled no toma los onclick -> de los botones no pero desconozco de un div
 //, esperar input usuario, mandar a verificarlo, 
