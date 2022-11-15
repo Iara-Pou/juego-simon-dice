@@ -47,8 +47,18 @@ function manejarRonda (){
 
 }
 
-function mostrarMensaje(mensaje){
- document.querySelector("h2").textContent = mensaje;
+function mostrarMensaje(mensajeTexto, flag=""){
+    const $mensaje = document.querySelector("h2")
+    $mensaje.textContent = mensajeTexto;
+
+ if(flag === true){
+    $mensaje.style.color = "#A5C879";
+ } else if (flag === false){
+    $mensaje.style.color = "#F2545B";
+ } else {
+    $mensaje.style.color = "#F3EFE0";
+ }
+
 }
 
 function resaltar ($cuadrado){
@@ -105,12 +115,12 @@ function validar (contadorRondas){
 
 function ganar (){
     deshabilitarCuadrados();
-    mostrarMensaje("¡Ganaste!");
+    mostrarMensaje("¡Ganaste!", true);
 }
 
 function perder (){
 deshabilitarCuadrados();
-mostrarMensaje("perdiste");
+mostrarMensaje("perdiste", false);
 }
 //manejar ronda -->    //deshabilitar los cuadrados : se podía hacer pasándole una función vacía. no sé si con el disabled no toma los onclick -> de los botones no pero desconozco de un div
 //, esperar input usuario, mandar a verificarlo, 
