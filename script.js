@@ -1,17 +1,14 @@
-//seleccionar el botón empezar para empezar el juego
 
 const $botonEmpezar = document.querySelector("#boton-empezar");
 $botonEmpezar.onclick = empezarJuego;
 
 function empezarJuego(){
-
     deshabilitar ($botonEmpezar);
 
     const secuenciaMaquina = [];
     const secuenciaUsuario = [];
     let contadorRondas = 0;
 
-    //sumar color a la secuencia de la máquina:
     secuenciaMaquina.push(devolverCuadradoRandom());
 
 }
@@ -21,15 +18,16 @@ function deshabilitar (elemento){
 }
 
 function devolverCuadradoRandom(){
-        //funcion que devuelva un cuadrado random
-        //selecciono los cuadrados y armo un array de cuadrados
-        //conseguir un número del 0 al 3
-        //return cuadrados[numero random del 0 al 3]
     const $cuadrados = document.querySelectorAll(".cuadrado");
     const indice = Math.floor(Math.random()*$cuadrados.length);
     return $cuadrados[indice];
 }
-//manejar ronda --> en realidad manejar ronda serviría para mostrar elementos, esperar input usuario, mandar a verificarlo, mandar a resultados si lo hubieran si gano mandarlo a ganar y si perdió mandarlo a perder.
+//manejar ronda --> empieza con el push, ronda serviría para mostrar elementos
+                    // con la , set time out función resaltar,  1000
+                    //mensaje = "turno de la máquina"
+                    //deshabilitar los cuadrados : se podía hacer pasándole una función vacía. no sé si con el disabled no toma los onclick -> de los botones no pero desconozco de un div
+//, esperar input usuario, mandar a verificarlo, 
+//verificarlo lo manda a resultados si lo hubieran si gano mandarlo a ganar y si perdió mandarlo a perder.
     //tener la secuencia de la máquina vacía
 
             //antes voy a tener que tener todos los cuadrados por separado, sino no va a saber que resaltar la máquina.
