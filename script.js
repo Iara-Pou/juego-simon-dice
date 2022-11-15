@@ -11,7 +11,7 @@ function empezarJuego(){
     const secuenciaUsuario = [];
     let contadorRondas = 0;
 
-        //sumar color a la secuencia de la máquina:
+    //sumar color a la secuencia de la máquina:
     secuenciaMaquina.push(devolverCuadradoRandom());
 
 }
@@ -19,7 +19,6 @@ function empezarJuego(){
 function deshabilitar (elemento){
     elemento.disabled = true;
 }
-//manejar ronda, --> una vez que ya la ejecuté deshabilitar el botón para empezar
 
 function devolverCuadradoRandom(){
         //funcion que devuelva un cuadrado random
@@ -30,6 +29,7 @@ function devolverCuadradoRandom(){
     const indice = Math.floor(Math.random()*$cuadrados.length);
     return $cuadrados[indice];
 }
+//manejar ronda --> en realidad manejar ronda serviría para mostrar elementos, esperar input usuario, mandar a verificarlo, mandar a resultados si lo hubieran si gano mandarlo a ganar y si perdió mandarlo a perder.
     //tener la secuencia de la máquina vacía
 
             //antes voy a tener que tener todos los cuadrados por separado, sino no va a saber que resaltar la máquina.
