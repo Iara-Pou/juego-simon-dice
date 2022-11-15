@@ -22,6 +22,7 @@ function devolverCuadradoRandom(){
 function manejarRonda (){
     deshabilitar ($botonEmpezar);
     if (contadorRondas !== 10){
+        secuenciaMaquina.push(devolverCuadradoRandom());
         setTimeout( secuenciaMaquina.forEach($cuadrado => resaltar($cuadrado)), 1000)
 
     } else {
