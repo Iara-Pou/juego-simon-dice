@@ -22,14 +22,17 @@ function devolverCuadradoRandom(){
 function manejarRonda (){
     deshabilitar ($botonEmpezar);
     secuenciaMaquina.push(devolverCuadradoRandom());
-    const RETRASO_TURNO_JUGADOR = (secuenciaMaquina.length+1)*1000;
+    const RETRASO_TURNO_JUGADOR = (secuenciaMaquina.length + 1)*1000;
 
     mostrarMensaje("Turno de la máquina");
 
     secuenciaMaquina.forEach(function($cuadrado, indice){
+
         const RETRASO_RESALTADO = (indice + 1) * 1000;
+
         setTimeout(() => { resaltar($cuadrado)          
         }, RETRASO_RESALTADO);
+
     })
 
     setTimeout( manejarInputUsuario, RETRASO_TURNO_JUGADOR);
@@ -44,11 +47,11 @@ function resaltar ($cuadrado){
     setTimeout(function(){
         $cuadrado.style.filter = "brightness(100%)";
     }, 500);
+
 }
 
 function manejarInputUsuario(evento){
-    //"tu turno"
-    mostrarMensaje("Tu turno!");
+
     //habilita cuadrados --> usaba el event. target
     //cuando los cuadrados tengan click, se resaltan.
 
