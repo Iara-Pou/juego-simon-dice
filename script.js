@@ -25,12 +25,12 @@ function manejarRonda (){
     const RETRASO_TURNO_JUGADOR = (secuenciaMaquina.length+1)*1000;
 
     mostrarMensaje("Turno de la máquina");
-    secuenciaMaquina.push(devolverCuadradoRandom());
-    setTimeout(secuenciaMaquina.forEach($cuadrado => resaltar($cuadrado))
-    , 1000)
 
-    } ganar();
-    setTimeout( manejarInputUsuario, RETRASO_TURNO_JUGADOR);
+    secuenciaMaquina.forEach(function($cuadrado, indice){
+        const RETRASO_RESALTADO = (indice + 1) * 1000;
+        setTimeout(() => { resaltar($cuadrado)          
+        }, RETRASO_RESALTADO);
+    })
 
 }
 
@@ -42,7 +42,7 @@ function resaltar ($cuadrado){
     $cuadrado.style.filter = "brightness(155%)";
     setTimeout(function(){
         $cuadrado.style.filter = "brightness(100%)";
-    }, 1000);
+    }, 500);
 }
 
 function manejarInputUsuario(evento){
