@@ -21,14 +21,18 @@ function devolverCuadradoRandom(){
 
 function manejarRonda (){
     deshabilitar ($botonEmpezar);
-    if (contadorRondas !== 10){
-        secuenciaMaquina.push(devolverCuadradoRandom());
-        setTimeout( secuenciaMaquina.forEach($cuadrado => resaltar($cuadrado)), 1000)
 
-    } else {
+    mostrarMensaje("Turno de la máquina");
+    secuenciaMaquina.push(devolverCuadradoRandom());
+    setTimeout(secuenciaMaquina.forEach($cuadrado => resaltar($cuadrado))
+    , 1000)
 
     } ganar();
 
+}
+
+function mostrarMensaje(mensaje){
+ document.querySelector("h2").textContent = mensaje;
 }
 
 function resaltar ($cuadrado){
