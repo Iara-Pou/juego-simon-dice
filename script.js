@@ -80,8 +80,9 @@ function manejarInputUsuario(evento){
         
         if(esExito){
             const rondaMayor = ++ contadorRondas ;
+            const usuarioGana = rondaMayor === 10;
 
-            if(rondaMayor === 10){
+            if(usuarioGana){
                 actualizarRondas(rondaMayor);
                 ganar();
             }else if(secuenciaUsuario.length === secuenciaMaquina.length){
