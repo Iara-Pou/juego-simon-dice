@@ -10,6 +10,10 @@ function deshabilitar (elemento){
     elemento.disabled = true;
 }
 
+function deshabilitarCuadrados (){
+    document.querySelectorAll(".cuadrado").forEach($cuadrado => deshabilitar($cuadrado));
+}
+
 function devolverCuadradoRandom(){
     const $cuadrados = document.querySelectorAll(".cuadrado");
     const indice = Math.floor(Math.random()*$cuadrados.length);
@@ -18,7 +22,8 @@ function devolverCuadradoRandom(){
 
 function manejarRonda (){
     deshabilitar ($botonEmpezar);
-    document.querySelectorAll(".cuadrado").forEach($cuadrado => deshabilitar($cuadrado))
+    deshabilitarCuadrados();
+    
     secuenciaMaquina.push(devolverCuadradoRandom());
     const RETRASO_TURNO_JUGADOR = (secuenciaMaquina.length + 1)*1000;
 
