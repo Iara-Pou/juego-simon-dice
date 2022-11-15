@@ -32,6 +32,7 @@ function manejarRonda (){
         }, RETRASO_RESALTADO);
     })
 
+    setTimeout( manejarInputUsuario, RETRASO_TURNO_JUGADOR);
 }
 
 function mostrarMensaje(mensaje){
