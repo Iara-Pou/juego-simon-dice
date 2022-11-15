@@ -63,6 +63,13 @@ function manejarInputUsuario(evento){
         secuenciaUsuario.push($cuadrado) 
         let esExito = validar (indice) 
         
+        if(esExito){
+            console.log("era ese")
+            indice ++;
+        } else {
+            console.log("no era ese");
+        }
+        
     }
 
     //if -> i sea === a length de la secuencia
@@ -74,6 +81,13 @@ function manejarInputUsuario(evento){
     //devuelve el nro de ronda
 }
 
+function validar (indice){
+    if (secuenciaMaquina[indice] === secuenciaUsuario[indice]){
+        return true;
+    } else {
+        return false;
+    }
+}
 
 function ganar (){
     console.log("gaa")
