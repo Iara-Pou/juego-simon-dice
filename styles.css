@@ -13,6 +13,7 @@ h1{
     height: 9em;
     width: 9em;
     cursor: pointer;
+    transition: brightness 1000ms;
 }
 
 #container-cuadrados{

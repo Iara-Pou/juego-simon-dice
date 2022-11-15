@@ -22,11 +22,21 @@ function devolverCuadradoRandom(){
 function manejarRonda (){
     deshabilitar ($botonEmpezar);
     if (contadorRondas !== 10){
+        setTimeout( secuenciaMaquina.forEach($cuadrado => resaltar($cuadrado)), 1000)
+
     } else {
 
     } ganar();
 
 }
+
+function resaltar ($cuadrado){
+    $cuadrado.style.filter = "brightness(155%)";
+    setTimeout(function(){
+        $cuadrado.style.filter = "brightness(100%)";
+    }, 1000);
+}
+
 function ganar (){
     console.log("gaa")
 }
