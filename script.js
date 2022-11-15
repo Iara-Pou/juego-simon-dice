@@ -1,5 +1,6 @@
 
 const $botonEmpezar = document.querySelector("#boton-empezar");
+$botonEmpezar.onclick = manejarRonda;
     
 const secuenciaMaquina = [];
 let secuenciaUsuario = [];
@@ -16,6 +17,11 @@ function devolverCuadradoRandom(){
     const $cuadrados = document.querySelectorAll(".cuadrado");
     const indice = Math.floor(Math.random()*$cuadrados.length);
     return $cuadrados[indice];
+}
+
+function manejarRonda (){
+    deshabilitar ($botonEmpezar);
+
 }
 //manejar ronda --> empieza con el push, ronda serviría para mostrar elementos
                     // con la , set time out función resaltar,  1000
