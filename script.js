@@ -6,8 +6,8 @@ const secuenciaMaquina = [];
 let secuenciaUsuario = [];
 let contadorRondas = 0;
 
-function deshabilitarBoton (elemento){
-    elemento.disabled = true;
+function deshabilitarBoton (){
+    $botonEmpezar.disabled = true;
 }
 
 function deshabilitarCuadrados (){
