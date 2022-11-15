@@ -21,6 +21,10 @@ function devolverCuadradoRandom(){
 
 function manejarRonda (){
     deshabilitar ($botonEmpezar);
+    if (contadorRondas<10){
+    } else {
+
+    } ganar();
 
 }
 //manejar ronda --> empieza con el push, ronda serviría para mostrar elementos
