@@ -1,20 +1,15 @@
 
 const $botonEmpezar = document.querySelector("#boton-empezar");
-$botonEmpezar.onclick = empezarJuego;
-
-function empezarJuego(){
-    deshabilitar ($botonEmpezar);
-
-    const secuenciaMaquina = [];
-    const secuenciaUsuario = [];
-    let contadorRondas = 0;
-
-    secuenciaMaquina.push(devolverCuadradoRandom());
-
-}
+    
+const secuenciaMaquina = [];
+let secuenciaUsuario = [];
+let contadorRondas = 0;
 
 function deshabilitar (elemento){
     elemento.disabled = true;
+    //voy a probar solo con el atributo y si no funciona, le sumo lo del onclick con la función vacía
+    // elemento.onclick = function(){
+    // }
 }
 
 function devolverCuadradoRandom(){
