@@ -6,12 +6,13 @@ const secuenciaMaquina = [];
 let secuenciaUsuario = [];
 let contadorRondas = 0;
 
-function deshabilitar (elemento){
+function deshabilitarBoton (elemento){
     elemento.disabled = true;
 }
 
 function deshabilitarCuadrados (){
-    document.querySelectorAll(".cuadrado").forEach($cuadrado => deshabilitar($cuadrado));
+    const $cuadrados = document.querySelectorAll(".cuadrado");
+    $cuadrados.forEach($cuadrado => $cuadrado.onclick = "");
 }
 
 function devolverCuadradoRandom(){
@@ -21,9 +22,8 @@ function devolverCuadradoRandom(){
 }
 
 function manejarRonda (){
-    deshabilitar ($botonEmpezar);
+    deshabilitarBoton();
     deshabilitarCuadrados();
-    
     secuenciaMaquina.push(devolverCuadradoRandom());
     const RETRASO_TURNO_JUGADOR = (secuenciaMaquina.length + 1)*1000;
 
