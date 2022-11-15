@@ -57,6 +57,8 @@ function resaltar ($cuadrado){
 
 function manejarInputUsuario(evento){
 
+    const $cuadrado = evento.target;
+    resaltar($cuadrado);
     //habilita cuadrados --> usaba el event. target
     //cuando los cuadrados tengan click, se resaltan.
 
