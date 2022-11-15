@@ -21,6 +21,8 @@ function devolverCuadradoRandom(){
 
 function manejarRonda (){
     deshabilitar ($botonEmpezar);
+    secuenciaMaquina.push(devolverCuadradoRandom());
+    const RETRASO_TURNO_JUGADOR = (secuenciaMaquina.length+1)*1000;
 
     mostrarMensaje("Turno de la máquina");
     secuenciaMaquina.push(devolverCuadradoRandom());
@@ -28,6 +30,7 @@ function manejarRonda (){
     , 1000)
 
     } ganar();
+    setTimeout( manejarInputUsuario, RETRASO_TURNO_JUGADOR);
 
 }
 
@@ -40,6 +43,22 @@ function resaltar ($cuadrado){
     setTimeout(function(){
         $cuadrado.style.filter = "brightness(100%)";
     }, 1000);
+}
+
+function manejarInputUsuario(evento){
+    //"tu turno"
+    mostrarMensaje("Tu turno!");
+    //habilita cuadrados --> usaba el event. target
+    //cuando los cuadrados tengan click, se resaltan.
+
+        //for -> i sea === a length de la secuencia
+    //toma los inputs
+    //compara inputs -> de a uno, los compara cuando son apretados
+    //
+
+    //ya no puede tomarlos
+    //secuencia vacía
+    //devuelve el nro de ronda
 }
 
 function ganar (){
