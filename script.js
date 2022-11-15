@@ -69,16 +69,19 @@ function manejarInputUsuario(evento){
         let esExito = validar (contadorRondas) 
         
         if(esExito){
-            contadorRondas ++;
+            const rondaMayor = ++ contadorRondas ;
 
-            if(secuenciaUsuario.length === secuenciaMaquina.length){
-                actualizarRondas(contadorRondas);
+            if(rondaMayor === 10){
+                actualizarRondas(rondaMayor);
+                ganar();
+            }else if(secuenciaUsuario.length === secuenciaMaquina.length){
+                actualizarRondas(rondaMayor);
 
                 secuenciaUsuario = [];
                 contadorRondas = 0;
-                
+
                 manejarRonda();
-            }
+            } 
 
         } else {
             perder();
