@@ -21,11 +21,14 @@ function devolverCuadradoRandom(){
 
 function manejarRonda (){
     deshabilitar ($botonEmpezar);
-    if (contadorRondas<10){
+    if (contadorRondas !== 10){
     } else {
 
     } ganar();
 
+}
+function ganar (){
+    console.log("gaa")
 }
 //manejar ronda --> empieza con el push, ronda serviría para mostrar elementos
                     // con la , set time out función resaltar,  1000
