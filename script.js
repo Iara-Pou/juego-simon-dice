@@ -41,7 +41,7 @@ function manejarRonda (){
     setTimeout(()=>{
         mostrarMensaje("Tu turno!");
         const $cuadrados = document.querySelectorAll(".cuadrado");
-        $cuadrados.forEach($cuadrado => $cuadrado.onclick = manejarInputUsuario)
+        $cuadrados.forEach($cuadrado => $cuadrado.onclick = manejarInputUsuario);
     }, RETRASO_TURNO_JUGADOR);
 
 }
@@ -69,22 +69,14 @@ function manejarInputUsuario(evento){
         let esExito = validar (indice) 
         
         if(esExito){
-            console.log("era ese")
             indice ++;
         } else {
-            console.log("no era ese");
             perder();
         }
         
     }
 
-    //if -> i sea === a length de la secuencia
-    //compara inputs -> de a uno, los compara cuando son apretados
-    //
 
-    //ya no puede tomarlos
-    //secuencia vacía
-    //devuelve el nro de ronda
 }
 
 function validar (indice){
