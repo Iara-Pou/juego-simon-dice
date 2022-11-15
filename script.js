@@ -35,7 +35,12 @@ function manejarRonda (){
 
     })
 
-    setTimeout( manejarInputUsuario, RETRASO_TURNO_JUGADOR);
+    setTimeout(()=>{
+        mostrarMensaje("Tu turno!");
+        const $cuadrados = document.querySelectorAll(".cuadrado");
+        $cuadrados.forEach($cuadrado => $cuadrado.onclick = manejarInputUsuario)
+    }, RETRASO_TURNO_JUGADOR);
+
 }
 
 function mostrarMensaje(mensaje){
