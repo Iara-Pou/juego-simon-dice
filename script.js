@@ -58,6 +58,11 @@ function manejarInputUsuario(evento){
     if(secuenciaUsuario.length < secuenciaMaquina.length){
         const $cuadrado = evento.target;
         resaltar($cuadrado);
+
+        let indice = 0;
+        secuenciaUsuario.push($cuadrado) 
+        let esExito = validar (indice) 
+        
     }
 
     //if -> i sea === a length de la secuencia
