@@ -81,16 +81,16 @@ function manejarInputUsuario(evento){
         resaltar($cuadrado);
 
         secuenciaUsuario.push($cuadrado) 
-        let esExito = validar (contadorRondas) 
+        let inputUsuarioCoincide = validar (contadorRondas) 
         
-        if(esExito){
+        if(inputUsuarioCoincide){
             const rondaMayor = ++ contadorRondas ;
             const usuarioGana = rondaMayor === 10;
 
             if(usuarioGana){
                 actualizarRondas(rondaMayor);
                 ganar();
-                
+
             } else if (secuenciaUsuario.length === secuenciaMaquina.length){
                 actualizarRondas(rondaMayor);
                 secuenciaUsuario = [];
