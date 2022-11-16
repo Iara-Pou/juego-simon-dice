@@ -88,14 +88,16 @@ function manejarInputUsuario(evento){
             const usuarioGana = rondaMayor === 10;
 
             if(usuarioGana){
+                actualizarRondas(rondaMayor);
                 ganar();
+                
             } else if (secuenciaUsuario.length === secuenciaMaquina.length){
+                actualizarRondas(rondaMayor);
                 secuenciaUsuario = [];
                 contadorRondas = 0;
                 manejarRonda();
             } 
             
-            actualizarRondas(rondaMayor);
 
         } else {
             perder();
