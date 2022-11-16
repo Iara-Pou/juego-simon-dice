@@ -83,7 +83,8 @@ function manejarInputUsuario(evento) {
     let inputUsuarioCoincide = validar(contadorRondas)
 
     if (inputUsuarioCoincide) {
-        const rondaMayor = ++contadorRondas;
+        contadorRondas ++;
+        const rondaMayor = contadorRondas;
         const usuarioGana = rondaMayor === 10;
 
         if (usuarioGana) {
