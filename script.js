@@ -3,7 +3,7 @@ $botonEmpezar.onclick = manejarRonda;
 
 let secuenciaMaquina = [];
 let secuenciaUsuario = [];
-let contadorRondas = 0;
+let contadorCuadradosIngresados = 0;
 
 
 function deshabilitarBotonEmpezar() {
@@ -80,11 +80,11 @@ function manejarInputUsuario(evento) {
     resaltar($cuadrado);
 
     secuenciaUsuario.push($cuadrado)
-    let inputUsuarioCoincide = validar(contadorRondas)
+    let inputUsuarioCoincide = validar(contadorCuadradosIngresados)
 
     if (inputUsuarioCoincide) {
-        contadorRondas ++;
-        const rondaMayor = contadorRondas;
+        contadorCuadradosIngresados ++;
+        const rondaMayor = contadorCuadradosIngresados;
         const usuarioGana = rondaMayor === 10;
 
         if (usuarioGana) {
@@ -93,7 +93,7 @@ function manejarInputUsuario(evento) {
         } else if (secuenciaUsuario.length === secuenciaMaquina.length) {
             actualizarRondas(rondaMayor);
             secuenciaUsuario = [];
-            contadorRondas = 0;
+            contadorCuadradosIngresados = 0;
 
             const RETRASO_CAMBIAR_TURNOS = 1000;
             setTimeout(manejarRonda, RETRASO_CAMBIAR_TURNOS);
@@ -110,8 +110,8 @@ function actualizarRondas(ronda) {
     document.querySelector("#numero-rondas").textContent = ronda;
 }
 
-function validar(contadorRondas) {
-    if (secuenciaMaquina[contadorRondas] === secuenciaUsuario[contadorRondas]) {
+function validar(indice) {
+    if (secuenciaMaquina[indice] === secuenciaUsuario[indice]) {
         return true;
     } else {
         return false;
@@ -138,6 +138,6 @@ function ofrecerPartidaNueva() {
 function reiniciarValoresIniciales() {
     secuenciaMaquina = [];
     secuenciaUsuario = [];
-    contadorRondas = 0;
-    actualizarRondas(contadorRondas);
+    contadorCuadradosIngresados = 0;
+    actualizarRondas(contadorCuadradosIngresados);
 }
