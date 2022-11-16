@@ -1,5 +1,5 @@
 const $botonEmpezar = document.querySelector("#boton-empezar");
-$botonEmpezar.onclick = manejarRonda;
+$botonEmpezar.addEventListener("click", manejarRonda, false)
 
 let secuenciaMaquina = [];
 let secuenciaUsuario = [];
