@@ -89,12 +89,13 @@ function manejarInputUsuario(evento) {
         if (usuarioGana) {
             actualizarRondas(rondaMayor);
             ganar();
-
         } else if (secuenciaUsuario.length === secuenciaMaquina.length) {
             actualizarRondas(rondaMayor);
             secuenciaUsuario = [];
             contadorRondas = 0;
-            manejarRonda();
+
+            const RETRASO_CAMBIAR_TURNOS = 1000;
+            setTimeout(manejarRonda, RETRASO_CAMBIAR_TURNOS);
         }
 
 
