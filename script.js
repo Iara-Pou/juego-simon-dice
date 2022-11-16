@@ -137,4 +137,5 @@ function reiniciarValoresIniciales() {
     secuenciaMaquina = [];
     secuenciaUsuario = [];
     contadorRondas = 0;
+    actualizarRondas(contadorRondas);
 }
