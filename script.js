@@ -123,7 +123,7 @@ function ganar() {
 
 function perder() {
     deshabilitarCuadrados();
-    mostrarMensaje("perdiste", false);
+    mostrarMensaje("Perdiste...", false);
     setTimeout(ofrecerPartidaNueva, 2000);
 }
 
