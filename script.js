@@ -76,7 +76,6 @@ function resaltar ($cuadrado){
 
 function manejarInputUsuario(evento){
 
-    if(secuenciaUsuario.length < secuenciaMaquina.length){
         const $cuadrado = evento.target;
         resaltar($cuadrado);
 
@@ -103,7 +102,6 @@ function manejarInputUsuario(evento){
             perder();
         }
         
-    }
 
 }
 
