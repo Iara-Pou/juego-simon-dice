@@ -139,5 +139,3 @@ function reiniciarValoresIniciales (){
     secuenciaUsuario = [];
     contadorRondas = 0;
 }
-        //habilitar el botón para que pueda jugar de vuelta
-        //actualizar mensaje ("Perdiste, si querés jugar de vuelta, apretá empezar")
