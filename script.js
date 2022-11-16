@@ -6,11 +6,11 @@ let secuenciaUsuario = [];
 let contadorRondas = 0;
 
 
-function deshabilitarBoton() {
+function deshabilitarBotonEmpezar() {
     $botonEmpezar.disabled = true;
 }
 
-function habilitarBoton() {
+function habilitarBotonEmpezar() {
     $botonEmpezar.disabled = false;
 }
 
@@ -26,7 +26,7 @@ function devolverCuadradoRandom() {
 }
 
 function manejarRonda() {
-    deshabilitarBoton();
+    deshabilitarBotonEmpezar();
     deshabilitarCuadrados();
 
     secuenciaMaquina.push(devolverCuadradoRandom());
@@ -129,7 +129,7 @@ function perder() {
 
 function ofrecerPartidaNueva() {
     mostrarMensaje('Si querés jugar de vuelta, apretá "START"', true);
-    habilitarBoton();
+    habilitarBotonEmpezar();
     reiniciarValoresIniciales();
 }
 
