@@ -53,13 +53,13 @@ function manejarRonda() {
 
 }
 
-function mostrarMensaje(mensajeTexto, flag = "") {
+function mostrarMensaje(mensajeTexto, usuarioGana) {
     const $mensaje = document.querySelector("h2")
     $mensaje.textContent = mensajeTexto;
 
-    if (flag === true) {
+    if (usuarioGana === true) {
         $mensaje.style.color = "#A5C879";
-    } else if (flag === false) {
+    } else if (usuarioGana === false) {
         $mensaje.style.color = "#F2545B";
     } else {
         $mensaje.style.color = "#F3EFE0";
