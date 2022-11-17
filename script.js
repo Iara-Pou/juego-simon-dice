@@ -26,6 +26,7 @@ function devolverCuadradoRandom() {
 }
 
 function manejarRonda() {
+
     deshabilitarBotonEmpezar();
     deshabilitarCuadrados();
 
@@ -80,9 +81,10 @@ function manejarInputUsuario(evento) {
     resaltar($cuadrado);
 
     secuenciaUsuario.push($cuadrado)
-    let inputUsuarioCoincide = validar(contadorCuadradosIngresados)
+    let inputUsuarioCoincide = validarSecuencia(contadorCuadradosIngresados)
 
     if (inputUsuarioCoincide) {
+
         contadorCuadradosIngresados ++;
         const rondaMayor = contadorCuadradosIngresados;
         const usuarioGana = rondaMayor === 10;
@@ -110,7 +112,7 @@ function actualizarRondas(ronda) {
     document.querySelector("#numero-rondas").textContent = ronda;
 }
 
-function validar(indice) {
+function validarSecuencia(indice) {
     if (secuenciaMaquina[indice] === secuenciaUsuario[indice]) {
         return true;
     } else {
