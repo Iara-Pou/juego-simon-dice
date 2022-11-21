@@ -3,7 +3,7 @@ $botonEmpezar.addEventListener("click", manejarRonda, false);
 
 let secuenciaMaquina = [];
 let secuenciaUsuario = [];
-let contadorCuadradosIngresados = 0;
+let cuadradosIngresadosCorrectamente = 0;
 
 
 function deshabilitarBotonEmpezar() {
@@ -83,22 +83,21 @@ function manejarInputUsuario(evento) {
     resaltar($cuadrado);
 
     secuenciaUsuario.push($cuadrado);
-    let inputUsuarioCoincide = compararSecuencia(contadorCuadradosIngresados);
+    let inputUsuarioCoincide = compararSecuencia(cuadradosIngresadosCorrectamente);
 
     if (inputUsuarioCoincide) {
-    //contador de cuadrados ingresados no subiría siempre? lo mismo con la ronda mayor. No tiene sentido que solo esté si coinciden
-        contadorCuadradosIngresados ++;
-        const rondaMayor = contadorCuadradosIngresados;
+        cuadradosIngresadosCorrectamente ++;
+        const rondaMayor = cuadradosIngresadosCorrectamente;
         actualizarRondas(rondaMayor);
 
         const usuarioGana = rondaMayor === 10;
-        
+
         if (usuarioGana) {
             ganar();
 
         } else if (secuenciaUsuario.length === secuenciaMaquina.length) {
             secuenciaUsuario = [];
-            contadorCuadradosIngresados = 0;
+            cuadradosIngresadosCorrectamente = 0;
 
             const RETRASO_CAMBIAR_TURNOS = 1000;
             setTimeout(manejarRonda, RETRASO_CAMBIAR_TURNOS);
@@ -143,6 +142,6 @@ function ofrecerPartidaNueva() {
 function reiniciarValoresIniciales() {
     secuenciaMaquina = [];
     secuenciaUsuario = [];
-    contadorCuadradosIngresados = 0;
-    actualizarRondas(contadorCuadradosIngresados);
+    cuadradosIngresadosCorrectamente = 0;
+    actualizarRondas(cuadradosIngresadosCorrectamente);
 }
