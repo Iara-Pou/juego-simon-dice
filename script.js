@@ -5,7 +5,6 @@ let secuenciaMaquina = [];
 let secuenciaUsuario = [];
 let cuadradosIngresadosCorrectamente = 0;
 
-
 function deshabilitarBotonEmpezar() {
     $botonEmpezar.disabled = true;
 }
