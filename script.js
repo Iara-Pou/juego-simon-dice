@@ -89,13 +89,14 @@ function manejarInputUsuario(evento) {
     //contador de cuadrados ingresados no subiría siempre? lo mismo con la ronda mayor. No tiene sentido que solo esté si coinciden
         contadorCuadradosIngresados ++;
         const rondaMayor = contadorCuadradosIngresados;
-        const usuarioGana = rondaMayor === 10;
+        actualizarRondas(rondaMayor);
 
+        const usuarioGana = rondaMayor === 10;
+        
         if (usuarioGana) {
-            actualizarRondas(rondaMayor);
             ganar();
+
         } else if (secuenciaUsuario.length === secuenciaMaquina.length) {
-            actualizarRondas(rondaMayor);
             secuenciaUsuario = [];
             contadorCuadradosIngresados = 0;
 
