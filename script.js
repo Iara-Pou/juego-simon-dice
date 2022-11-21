@@ -16,6 +16,7 @@ function habilitarBotonEmpezar() {
 
 function deshabilitarCuadrados() {
     const $cuadrados = document.querySelectorAll(".cuadrado");
+    //chequear esto, mejor pasar la función vacía.
     $cuadrados.forEach($cuadrado => $cuadrado.onclick = "");
 }
 
@@ -81,10 +82,11 @@ function manejarInputUsuario(evento) {
     resaltar($cuadrado);
 
     secuenciaUsuario.push($cuadrado)
+    //mejor comparar secuencia que validar secuencia, más claro. y chequear los ;
     let inputUsuarioCoincide = validarSecuencia(contadorCuadradosIngresados)
 
     if (inputUsuarioCoincide) {
-
+    //contador de cuadrados ingresados no subiría siempre? lo mismo con la ronda mayor. No tiene sentido que solo esté si coinciden
         contadorCuadradosIngresados ++;
         const rondaMayor = contadorCuadradosIngresados;
         const usuarioGana = rondaMayor === 10;
