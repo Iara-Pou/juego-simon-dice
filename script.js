@@ -16,8 +16,9 @@ function habilitarBotonEmpezar() {
 
 function deshabilitarCuadrados() {
     const $cuadrados = document.querySelectorAll(".cuadrado");
-    //chequear esto, mejor pasar la función vacía.
-    $cuadrados.forEach($cuadrado => $cuadrado.onclick = "");
+    $cuadrados.forEach($cuadrado => $cuadrado.onclick = ()=> function(){
+
+    });
 }
 
 function devolverCuadradoRandom() {
