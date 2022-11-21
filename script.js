@@ -1,5 +1,5 @@
 const $botonEmpezar = document.querySelector("#boton-empezar");
-$botonEmpezar.addEventListener("click", manejarRonda, false)
+$botonEmpezar.addEventListener("click", manejarRonda, false);
 
 let secuenciaMaquina = [];
 let secuenciaUsuario = [];
@@ -42,7 +42,7 @@ function manejarRonda() {
         const RETRASO_RESALTADO = (indice + 1) * 1000;
 
         setTimeout(() => {
-            resaltar($cuadrado)
+            resaltar($cuadrado);
         }, RETRASO_RESALTADO);
 
     })
@@ -56,7 +56,7 @@ function manejarRonda() {
 }
 
 function mostrarMensaje(mensajeTexto, usuarioGana) {
-    const $mensaje = document.querySelector("h2")
+    const $mensaje = document.querySelector("h2");
     $mensaje.textContent = mensajeTexto;
 
     if (usuarioGana === true) {
@@ -82,9 +82,8 @@ function manejarInputUsuario(evento) {
     const $cuadrado = evento.target;
     resaltar($cuadrado);
 
-    secuenciaUsuario.push($cuadrado)
-    //mejor comparar secuencia que validar secuencia, más claro. y chequear los ;
-    let inputUsuarioCoincide = validarSecuencia(contadorCuadradosIngresados)
+    secuenciaUsuario.push($cuadrado);
+    let inputUsuarioCoincide = compararSecuencia(contadorCuadradosIngresados);
 
     if (inputUsuarioCoincide) {
     //contador de cuadrados ingresados no subiría siempre? lo mismo con la ronda mayor. No tiene sentido que solo esté si coinciden
@@ -115,7 +114,7 @@ function actualizarRondas(ronda) {
     document.querySelector("#numero-rondas").textContent = ronda;
 }
 
-function validarSecuencia(indice) {
+function compararSecuencia(indice) {
     if (secuenciaMaquina[indice] === secuenciaUsuario[indice]) {
         return true;
     } else {
